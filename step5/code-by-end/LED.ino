@@ -1,22 +1,20 @@
-// IMPORTANT: Set pixel COUNT, PIN and TYPE
-#define PIXEL_COUNT 1
-#define PIXEL_PIN D7
-#define PIXEL_TYPE WS2812B
-Adafruit_NeoPixel strip(PIXEL_COUNT, PIXEL_PIN, PIXEL_TYPE);
 
 int redValue = 255; // Full brightness for an ANODE RGB LED is 0, and off 255
 int greenValue = 255; // Full brightness for an ANODE RGB LED is 0, and off 255
 int blueValue = 255; // Full brightness for an ANODE RGB LED is 0, and off 255</td>
 
+int redPin = D4;    // RED pin of the LED to PWM pin **d2**
+int greenPin = D5;  // GREEN pin of the LED to PWM pin **d3**
+int bluePin = D6;   // BLUE pin of the LED to PWM pin **D4**
 
 // Define a pin we'll place an LED on
-int ledPin = D3;
+int ledPin = D2;
 
 // Our button wired to D0
-int buttonPin = D4;
+int buttonPin = D3;
 
 // Define a pin that we'll place the pot on
-int potPin = A0;
+int potPin = A5;
 
 // Create a variable to hold the pot reading
 int potReading = 0;
@@ -28,10 +26,11 @@ void setup()
 {
   // Set up the LED for output
   pinMode(ledPin, OUTPUT);
+  
+  pinMode( redPin, OUTPUT );
+  pinMode( greenPin, OUTPUT );	
+  pinMode( bluePin, OUTPUT );	
 	
-  // Set up our NEOPIXEL RGB Pin pins for output
-  strip.begin();	
-
   // For input, we define the
   // pushbutton as an input-pullup
   // this uses an internal pullup resistor
@@ -41,6 +40,8 @@ void setup()
 
   // Create a cloud variable of type integer
   // called 'dial' mapped to potReading
+
+
 
   Particle.variable("dial", &potReading, INT);
 
@@ -79,6 +80,8 @@ void setRGBColor( int r, int g, int b ){
   greenValue = g;
   blueValue = b;
 	
-  strip.setPixelColor(0, redValue, greenValue, blueValue);
-  strip.show();
+  analogWrite(redPin, redValue);
+  analogWrite(greenPin, greenValue);
+  analogWrite(bluePin, blueValue);
+
 }

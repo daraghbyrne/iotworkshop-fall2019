@@ -27,8 +27,7 @@ By the end of this workshop you'll have built a simple internet controlled light
 - Step 2: [Turn and LED on and Off with a pushbutton](/step2)
 - Step 3: [Adding a Potentiometer and Fading the LED](/step3)
 - Step 4: [Adding Internet - Seeing Values](/step4)
-
-/- Step 5: [Controling Color](/step5)
+- Step 5: [Controling Color](/step5)
 /- Step 6: [Bitcoin Data](/step6)
 /- Step 7: [Displaying Data](/step7)
 /- Step 8: [Better Loading](/step8)
