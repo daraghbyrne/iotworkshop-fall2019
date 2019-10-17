@@ -1,4 +1,4 @@
-# Step 5: Controlling color 
+# Step 5: Adding Full Color
 
 We've covered all the basics and got the core of our circuit built. Now it's time to start making our connected product: an internet connected light
 

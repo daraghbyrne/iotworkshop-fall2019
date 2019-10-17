@@ -62,11 +62,6 @@ void setup()
 
   Particle.function("state", changeState );
 
-  Particle.subscribe( "iot-workshop/hue/setcolor", handleSetColor );
-
-
-
-
 }
 
 void loop()
@@ -106,41 +101,6 @@ void loop()
     delay( 1000 );
 }
 
-void handleSetColor(const char *event, const char *data)
-{
-    blinkStatusLED();
-
-    currentHueState = HIGH;
-
-    String colors[3];
-    colors[0]="";
-    colors[1]="";
-    colors[2]="";
-
-    String colorString = String( data );
-
-    int index = 0;
-    for( int i = 0; i < colorString.length(); i++ )
-    {
-      if( index < 3 ){
-        char c = colorString.charAt(i);
-        colors[index] += c;
-
-        if( c == ',') index++;
-      }
-    }
-
-    // get the red component...
-    redValue = colors[0].toInt();
-    // now green
-    greenValue = colors[1].toInt();
-    // now blue
-    blueValue = colors[2].toInt();
-
-    updateColorLED();
-
-
-}
 
 void blinkStatusLED(){
 

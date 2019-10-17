@@ -27,13 +27,12 @@ By the end of this workshop you'll have built a simple internet controlled light
 - Step 2: [Turn and LED on and Off with a pushbutton](/step2)
 - Step 3: [Adding a Potentiometer and Fading the LED](/step3)
 - Step 4: [Adding Internet - Seeing Values](/step4)
-- Step 5: [Controling Color](/step5)
-/- Step 6: [Bitcoin Data](/step6)
-/- Step 7: [Displaying Data](/step7)
-/- Step 8: [Better Loading](/step8)
-/- Step 9: [Adding Multiple Currencies](/step9)
-/- Step 10: [On/Off](/step10)
-/- Step 11: [Fine Tuning](/step11)
+- Step 5: [Full Color](/step5)
+- Step 6: [Remote Controlling Color](/step6)
+- Step 7: [Displaying Remote Interactions](/step7)
+- Step 8: [On/Off](/step8)
+- Step 9: [Remote On/Off](/step9)
+- Step 10: [Fine Tuning](/step10)
 
 By the end of this you should have a working Particle Hue! This is only a starting point. With a little effort, you can easily modify this example to be an internet connected device that does a lot of different stuff. It could be adapted to be a weather display, a game, etc.
 
